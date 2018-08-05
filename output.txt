@@ -1,0 +1,456 @@
+////////////////////////
+//page1_script.js
+// 定数animalを定義してください
+const animal = {
+  name: "レオ",
+  age: 3,
+  greet: () => {
+    console.log("こんにちは");
+  }
+};
+
+// animalのnameプロパティの値を出力してください
+console.log(animal.name);
+
+// animalのgreetプロパティの関数を実行してください
+animal.greet();
+
+////////////////////////
+//page2_script.js
+// Animalクラスを定義してください
+class Animal {
+  
+}
+
+////////////////////////
+//page3_script.js
+class Animal {
+}
+
+// Animalクラスのインスタンスを定数animalに代入してください
+const animal = new Animal();
+
+// 定数animalの値を出力してください
+console.log(animal);
+
+////////////////////////
+//page4_script.js
+class Animal {
+  // コンストラクタを追加してください
+  constructor(){
+    console.log('インスタンスを生成しました');
+  }
+  
+}
+
+const animal = new Animal();
+
+////////////////////////
+//page5_script.js
+class Animal {
+  constructor() {
+    // nameの値に文字列「レオ」を代入してください
+    this.name = "レオ";
+    
+    // ageの値に数値の「3」を代入してください
+    this.age = 3;
+  }
+}
+
+const animal = new Animal();
+
+// 「名前: 〇〇」となるように出力してください
+console.log("名前: " + animal.name);
+
+// 「年齢: 〇〇」となるように出力してください
+console.log("年齢: " + animal.age);
+
+////////////////////////
+//page6_script.js
+class Animal {
+  // 引数に「name」と「age」を追加してください
+  constructor(name, age) {
+    // 「"レオ"」の代わりに引数nameの値を代入してください
+    this.name = name;
+    
+    // 「3」の代わりに引数ageの値を代入してください
+    this.age = age;
+  }
+}
+
+// 引数に「"モカ"」と「8」を渡してください
+const animal = new Animal("モカ", 8);
+
+console.log(`名前: ${animal.name}`);
+console.log(`年齢: ${animal.age}`);
+
+////////////////////////
+//page7_script.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  // greetメソッドを追加してください
+  greet(){
+    console.log('こんにちは');
+  }
+  
+}
+
+const animal = new Animal("レオ", 3);
+
+console.log(`名前: ${animal.name}`);
+console.log(`年齢: ${animal.age}`);
+
+// animalに対してgreetメソッドを呼び出してください
+animal.greet();
+
+////////////////////////
+//page8_script.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  // infoメソッドを追加してください
+  info(){
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+  
+}
+
+const animal = new Animal("レオ", 3);
+animal.greet();
+
+// animalに対してinfoメソッドを呼び出してください
+animal.info();
+
+
+
+////////////////////////
+//page9_script.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    // greetメソッドを呼び出してください
+    this.greet();
+    
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+const animal = new Animal("レオ", 3);
+// 以下の行を消してください
+
+animal.info();
+////////////////////////
+//page10_animal.js
+// Animalクラスのコードを貼り付けてください
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+////////////////////////
+//page10_script.js
+// ここより上のコードを「animal.js」に移してください
+
+const animal = new Animal("レオ", 3);
+animal.info();
+
+////////////////////////
+//page11_animal.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+// Animalクラスが他のファイルでも使用できるようにしてください
+export default Animal;
+
+////////////////////////
+//page11_script.js
+// 「animal.js」からAnimalクラスを読み込んでください
+import Animal from './animal.js';
+
+const animal = new Animal("レオ", 3);
+animal.info();
+
+////////////////////////
+//page12_animal.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+export default Animal;
+
+////////////////////////
+//page12_dog.js
+// Animalクラスを読み込んでください
+import Animal from './animal.js';
+
+// Animalクラスを継承してDogクラスを定義してください
+class Dog extends Animal{
+  
+}
+
+////////////////////////
+//page12_script.js
+import Animal from "./animal.js";
+
+const animal = new Animal("レオ", 3);
+animal.info();
+
+////////////////////////
+//page13_animal.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+export default Animal;
+
+////////////////////////
+//page13_dog.js
+import Animal from "./animal.js";
+
+class Dog extends Animal {
+}
+
+// Dogクラスが他のファイルでも使用できるようにしてください
+export default Dog; 
+
+////////////////////////
+//page13_script.js
+// Dogクラスを読み込んでください
+import Dog from "./dog.js";
+
+// 定数dogにDogクラスのインスタンスを代入してください
+const dog= new Dog("レオ", 4);
+
+// dogに対してinfoメソッドを呼び出してください
+dog.info();
+
+////////////////////////
+//page14_animal.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+export default Animal;
+
+////////////////////////
+//page14_dog.js
+import Animal from "./animal.js";
+
+class Dog extends Animal {
+  // getHumanAgeメソッドを追加してください
+  getHumanAge(){
+  return this.age * 7;
+}
+  
+}
+
+export default Dog;
+
+////////////////////////
+//page14_script.js
+import Dog from "./dog.js";
+
+const dog = new Dog("レオ", 4);
+dog.info();
+
+// dogに対してgetHumanAgeを呼び出してください
+const humanAge = dog.getHumanAge();
+
+// 「人間年齢で〇〇歳です」と出力してください
+console.log(`人間年齢で${humanAge}歳です`);
+////////////////////////
+//page15_animal.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+export default Animal;
+
+////////////////////////
+//page15_dog.js
+import Animal from "./animal.js";
+
+class Dog extends Animal {
+  // infoメソッドを追加してください
+  info(){
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+    
+    const humanAge = this.getHumanAge();
+    console.log(`人間年齢で${humanAge}歳です`);
+  }
+  
+  
+  getHumanAge() {
+    return this.age * 7;
+  }
+}
+
+export default Dog;
+
+////////////////////////
+//page15_script.js
+import Dog from "./dog.js";
+
+const dog = new Dog("レオ", 4);
+dog.info();
+
+////////////////////////
+//page16_animal.js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("こんにちは");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    console.log(`${this.age}歳です`);
+  }
+}
+
+export default Animal;
+
+////////////////////////
+//page16_dog.js
+import Animal from "./animal.js";
+
+class Dog extends Animal {
+  // constructorを追加してください
+  constructor(name, age, breed){
+    super(name, age);
+    this.breed = breed;
+  }
+  
+  
+  info() {
+    this.greet();
+    console.log(`名前は${this.name}です`);
+    // 「犬種は〇〇です」と出力してください
+    console.log(`犬種は${this.breed}です`);
+    
+    console.log(`${this.age}歳です`);
+    const humanAge = this.getHumanAge();
+    console.log(`人間年齢で${humanAge}歳です`);
+  }
+  
+  getHumanAge() {
+    return this.age * 7;
+  }
+}
+
+export default Dog;
+
+////////////////////////
+//page16_script.js
+import Dog from "./dog.js";
+
+// 引数に「"チワワ"」を渡してください
+const dog = new Dog("レオ", 4, "チワワ");
+dog.info();
+
