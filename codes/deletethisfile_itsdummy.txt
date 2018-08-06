@@ -1,0 +1,3 @@
+このファイルは消して、codes直下にまとめたいファイルを放り込んでください。
+このプログラムはQiitaで紹介しています。
+https://qiita.com/Yukiya025/items/c80b143427ceaa343c22
